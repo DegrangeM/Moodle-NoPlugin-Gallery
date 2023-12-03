@@ -1,10 +1,10 @@
 {
 
-    let filemanager = document.querySelector('.filemanager');
-
     let buildGallery = () => {
-
-        if(!filemanager.querySelector('.ygtvitem')) {
+        
+        let filemanager = document.querySelector('.filemanager');
+        
+        if(!filemanager?.querySelector('.ygtvitem')) {
             setTimeout(buildGallery, 100);
             return;
         }
