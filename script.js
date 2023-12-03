@@ -1,24 +1,40 @@
 let filemanager = document.querySelector('.filemanager');
 
-let items = Array.from(filemanager.querySelectorAll('.ygtvitem'));
+let items = Array.from(filemanager.querySelector('.ygtvitem').querySelectorAll('.ygtvitem'));
 
 let files = [];
 
-let output = "";
+let output = '';
+
+let current = [];
 
 for(let i = 0; i < items.length; i++) {
     let item = items[i];
+    let table = item.querySelector('table');
+    let level;
+    for (level = 0; level <= 5; level++) {
+        if(table.classList.contains('ygtvdepth' + level)) {
+            break;
+        }
+    }
+
+    // console.log(item, level, current, item.querySelector('.fp-filename')?.innerHTML);
+    if(level > current.length) {
+
+    } else {
+        while(level < current.length) {
+            output += '</div>';
+            current.pop();
+        }
+    } 
     if(item.querySelector('.ygtvitem')) {
         // C'est un dossier
-        let table = item.querySelector('table');
-        let level;
-        for (level = 0; level <= 5; level++) {
-            if(table.classList.contains('ygtvdepth' + level)) {
-                break;
-            }
-        }
-        level++;
-        output += '<h' + level + '>' + item.querySelector('.fp-filename').innerHTML + '</h' + level + '>';
+        let title = item.querySelector('.fp-filename').innerHTML;
+        current.push(title);
+        output += '<div class="gallery-folder">';
+        //current = current.slice(0, level);
+        // current.push(title);
+        output += '<h' + (level + 1) + '>' + title + '</h' + level + '>';
     } else {
         // C'est un fichier
         let img = item.querySelector('img');
@@ -28,4 +44,8 @@ for(let i = 0; i < items.length; i++) {
     }
 }
 
-filemanager.innerHTML += output;
+output += '<style>.gallery-folder{border:1px solid black;margin:5px;padding:5px;}</style>';
+
+filemanager.style.display = 'none';
+
+document.querySelector('.foldertree').innerHTML += output;
