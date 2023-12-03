@@ -12,8 +12,8 @@ Deux possibilités d'utilisation :
   <script src="https://cdn.jsdelivr.net/gh/DegrangeM/Moodle-NoPlugin-Gallery/script.js"></script>
   ```
 
--  En restaurant un fichier de sauvegarde
-
+- En restaurant un fichier de sauvegarde
+  
   Téléchargez et restaurez le fichiers suivant : https://github.com/DegrangeM/Moodle-NoPlugin-Gallery/raw/master/Moodle-Noplugin-Gallery.mbz
 
 Il vous suffit ensuite d'ajouter vos images dans votre activité dossiers.
