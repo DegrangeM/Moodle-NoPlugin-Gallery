@@ -53,7 +53,7 @@
             }
         }
 
-        output += '<style>.gallery-folder{border:1px solid black;margin:5px;padding:5px;}</style>';
+        output += '<style>.gallery-folder{border:1px solid black;margin:5px;padding:5px;} .gallery-folder img {margin: 5px;}</style>';
 
         filemanager.style.display = 'none';
 
