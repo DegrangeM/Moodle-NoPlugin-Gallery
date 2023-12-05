@@ -46,14 +46,15 @@
                 output += '<h' + (level + 1) + '>' + title + '</h' + (level + 1) + '>';
             } else {
                 // C'est un fichier
+                let title = item.querySelector('.fp-filename').innerHTML;
                 let img = item.querySelector('img');
                 let thumbnail = img.src.replace('?preview=tinyicon', '?preview=thumb');
                 let link = img.src.replace('?preview=tinyicon', '?link=open');
-                output += '<a href="' + link + '" target="_blank"><img src="' + thumbnail + '"></a>';
+                output += '<div class="gallery-item" title="' + title + '"><a href="' + link + '" target="_blank"><img src="' + thumbnail + '"></a><center>' + title + '</center></div>';
             }
         }
 
-        output += '<style>.gallery-folder{border:1px solid black;margin:5px;padding:5px;} .gallery-folder img {margin: 5px;}</style>';
+        output += '<style>.gallery-folder{border:1px solid black;margin:5px;padding:5px;} .gallery-item {display:inline-flex; flex-direction:column; margin:5px; width: 90px; } .gallery-item center { width: 100%; overflow:hidden; text-overflow: ellipsis; font-size: 75%; }</style>';
 
         filemanager.style.display = 'none';
 
