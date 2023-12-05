@@ -43,7 +43,7 @@
                 output += '<div class="gallery-folder">';
                 //current = current.slice(0, level);
                 // current.push(title);
-                output += '<h' + (level + 1) + '>' + title + '</h' + level + '>';
+                output += '<h' + (level + 1) + '>' + title + '</h' + (level + 1) + '>';
             } else {
                 // C'est un fichier
                 let img = item.querySelector('img');
