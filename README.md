@@ -2,7 +2,7 @@
 
 Cet outil permet d'intégrer une galerie d'image à un cours Moodle. Aucun plugin n'est nécessaire, il s'agit d'une "augmentation" de l'activité "[Dossier](https://github.com/DegrangeM/Moodle-NoPlugin-Gallery/assets/53106394/0a0d6d56-f6b3-4971-bce2-f1c052e0a786)". 
 
-![image](https://github.com/DegrangeM/Moodle-NoPlugin-Gallery/assets/53106394/a01065f4-faca-488a-87ab-03f8f63999f1)
+![image](https://github.com/DegrangeM/Moodle-NoPlugin-Gallery/assets/53106394/eb11c9e6-fb74-4947-8480-2ffe71a7b310)
 
 ## Installation
 Deux possibilités :
